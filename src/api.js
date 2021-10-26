@@ -10,7 +10,7 @@ router.get('/',(req, res) =>{
     const clientIp = requestIp.getClientIp(req);
     console.log(clientIp);
     //res.json({clientIp});
-    res.send("clientIp");
+    res.send(clientIp);
 
 });
 app.use('/.netlify/functions/api',router);
