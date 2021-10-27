@@ -12,11 +12,11 @@ router.get('/',(req, res) =>{
     const geo = geoip.lookup(clientIp.toString());
     if (geo.country==="IN")
     {
-        response.redirect('https://www.facebook.com/goo');
+        res.redirect('https://www.facebook.com/goo');
     }
     else
     {
-        response.redirect("https://www.google.com/");
+        res.redirect("https://www.google.com/");
     }
     console.log(clientIp);
     //res.json({clientIp});
