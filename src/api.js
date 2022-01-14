@@ -1,15 +1,18 @@
 const express = require('express');
 const serverless = require('serverless-http');
-const requestIp = require('request-ip');
+//const requestIp = require('request-ip');
 
 const router=express.Router();
 
 const app = express();
 router.get('/',(req, res) =>{
 
-    const clientIp = requestIp.getClientIp(req);
-    console.log(clientIp);
+    //const clientIp = requestIp.getClientIp(req);
+    //console.log(clientIp);
     //res.json({clientIp});
+    res.json({
+		'hello':'hi this is app'
+	});
     res.send(clientIp);
 
 });
